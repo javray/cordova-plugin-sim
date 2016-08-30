@@ -51,7 +51,7 @@ public class Sim extends CordovaPlugin {
       String simOperator = manager.getSimOperator();
       String networkOperator = manager.getNetworkOperator();
       String carrierName = manager.getSimOperatorName();
-      String networkCarrierName = manage.getNetworkOperatorName();
+      String networkCarrierName = manager.getNetworkOperatorName();
 
       String deviceId = "";
       String deviceSoftwareVersion = "";
