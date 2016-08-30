@@ -49,7 +49,7 @@ public class Sim extends CordovaPlugin {
       String phoneNumber = "";
       String countryCode = manager.getSimCountryIso();
       String simOperator = manager.getSimOperator();
-      String networkOperador = manager.getNetworkOperator();
+      String networkOperator = manager.getNetworkOperator();
       String carrierName = manager.getSimOperatorName();
       String networkCarrierName = manage.getNetworkOperatorName();
 
