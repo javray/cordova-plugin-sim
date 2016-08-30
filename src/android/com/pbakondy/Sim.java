@@ -49,7 +49,9 @@ public class Sim extends CordovaPlugin {
       String phoneNumber = "";
       String countryCode = manager.getSimCountryIso();
       String simOperator = manager.getSimOperator();
+      String networkOperador = manager.getNetworkOperator();
       String carrierName = manager.getSimOperatorName();
+      String networkCarrierName = manage.getNetworkOperatorName();
 
       String deviceId = "";
       String deviceSoftwareVersion = "";
@@ -79,6 +81,15 @@ public class Sim extends CordovaPlugin {
         mcc = simOperator.substring(0, 3);
         mnc = simOperator.substring(3);
       }
+      
+      String networkMCC = "";
+      String networkMNC = "";
+      
+      if (networkOperator.length() >= 3) {
+        networkMCC = networkOperator.substring(0, 3);
+        networkMNC = networkOperator.substring(3);
+        
+      }
 
       JSONObject result = new JSONObject();
 
@@ -86,6 +97,10 @@ public class Sim extends CordovaPlugin {
       result.put("countryCode", countryCode);
       result.put("mcc", mcc);
       result.put("mnc", mnc);
+      
+      result.put("netoworkCarrierName", networkCarrierName);
+      result.put("networkMCC", networkMCC);
+      result.put("networkMNC", networkMNC);
 
       result.put("callState", callState);
       result.put("dataActivity", dataActivity);
